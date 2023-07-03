@@ -1,0 +1,12 @@
+new_todo = input('what\'s the new to-do item? ')
+
+with open('todo.txt', 'r')as todo_file:
+    todo = todo_file.read()
+
+todo = new_todo + '\n'
+
+with open('todo.txt', 'w')as todo_file:
+    todo_file.write(todo)
+
+with open('todocheck.txt', 'w')as todoch_file:
+    todoch_file.write(todo)
